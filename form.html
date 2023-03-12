@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!-- Boxicons CSS -->
+     <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">  
+ 
+ <style>
+  * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(#000000 50%, #FDA803 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.container.searcher {
+  width: 30em;
+  font-size: 16px;
+  max-width: 100%;
+  padding: 3em 1.8em;
+  background-color: #201f28;
+  position: relative;
+  border-radius: 0.6em;
+  box-shadow: 1.2em 2em 3em rgba(0, 0, 0, 0.2);
+}
+.container.message{
+  width: 30em;
+  font-size: 16px;
+  max-width: 100%;
+  padding: 3em 1.8em;
+  background-color: #201f28;
+  position: relative;
+  border-radius: 0.6em;
+  box-shadow: 1.2em 2em 3em rgba(0, 0, 0, 0.2);
+
+}
+.container.hide{
+  display: none;
+}
+
+.message .top{
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+.message .top i{
+  color: #FDA803;
+  font-size: 2em;
+
+}
+.message .btn {
+  width: 10em;
+}
+.message .btn i{
+  font-size: 1rem;
+}
+
+.message form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+
+}
+.message form input,.message form textarea{
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: .3rem;
+  border: #a0a0a0 2px solid ;
+  background: transparent;
+  width: 100%;
+  transition: 0.5s ease;
+  resize: none;
+  color: #ffffff;
+
+}
+
+.message form input:focus,.message form textarea:focus{
+  border: 2px solid #FDA803;
+}
+
+.search-container {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 1.2em;
+}
+.search-container input,
+.search-container button {
+  font-size: 0.9em;
+  outline: none;
+  border-radius: 0.3em;
+  color: #ffffff;
+}
+.search-container input {
+  background-color: transparent;
+  border: 1px solid #a0a0a0;
+  padding: 0.7em;
+  color: #ffffff;
+}
+.search-container input:focus {
+  border-color: #ffffff;
+}
+.search-container button {
+  background-color: #FDA803;
+  border: none;
+  cursor: pointer;
+}
+#result {
+  color: #ffffff;
+}
+.info {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  align-items: center;
+  margin-top: 1.2em;
+}
+.poster {
+  width: 100%;
+}
+h2 {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  margin: 0.6em 0 0.9em 0;
+}
+.rating img {
+  width: 1.2em;
+}
+.rating h4 {
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+.details {
+  display: flex;
+  font-size: 0.95em;
+  gap: 1em;
+  justify-content: center;
+  color: #a0a0a0;
+  margin: 0.6em 0;
+  font-weight: 300;
+}
+.genre {
+  display: flex;
+  justify-content: space-around;
+}
+.genre div {
+  border: 1px solid #a0a0a0;
+  font-size: 0.75em;
+  padding: 0.4em 1.6em;
+  border-radius: 0.4em;
+  font-weight: 300;
+}
+h3 {
+  font-weight: 500;
+  margin-top: 1.2em;
+}
+p {
+  font-size: 0.9em;
+  font-weight: 300;
+  line-height: 1.8em;
+  text-align: justify;
+  color: #a0a0a0;
+}
+.msg {
+  text-align: center;
+}
+
+i{
+  margin-right: 5px;
+  font-size: .9rem;
+}
+.btn{
+  color: #ffffff;
+  background-color: #FDA803;
+  margin-bottom: 10px;
+  padding: 7px;
+  border:none;
+  outline: none;
+  border-radius: .3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    font-size: 14px;
+  }
+  .info {
+    grid-template-columns: 1fr;
+  }
+  .poster {
+    margin: auto;
+    width: auto;
+    max-height: 10.8em;
+  }
+}
+
+ </style>
+       <title>message</title>
+</head>
+<body>
+    <div class="container  message">
+        <div class="top"><a href="translate.html"><span class="back"><i class="fa-solid fa-house"></i></span></a>
+        <h3>leave a comment</h3>
+        <spa class="menue"></spa><i class="fa-solid fa-bars"></i></spa></div>
+     <form action="https://formsubmit.co/1611c09e57b190575bbe56d21287fd69" method="post">
+          <input type="name" name="name" id="name" placeholder="what's your name ?">
+          <textarea name="message" id="msg" cols="30" rows="10" placeholder="your message"></textarea>
+          <button class="btn">
+            <i class="fa-solid fa-message"></i>Send message</button>
+        </form>
+  
+      </div>
+  
+</body>
+</html>
